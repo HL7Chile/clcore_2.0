@@ -1657,11 +1657,10 @@ Description: "Sexo Listado Deis"
 * #93 "No Informado"
 * #99 "Desconocido"
 
-/*
-ValueSet: VSPrevision
-Id: VSPrevision
-Title: "Prevision"
-Description: "Prevision"
+ValueSet: VStest2
+Id: VStest2
+Title: "Sexo Listado Deis"
+Description: "Sexo Listado Deis"
 * ^experimental = false
 * ^version = "0.1"
 * ^status = #active
@@ -1671,12 +1670,12 @@ Description: "Prevision"
 * ^contact.telecom.value = "minsal@minsal.cl"
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
-* codes from system CSPrevision
+* codes from system CStest2
 
-CodeSystem: CSPrevision
-Id: CSPrevision
-Title: "Prevision"
-Description: "Prevision"
+CodeSystem: CStest2
+Id: CStest2
+Title: "Sexo Listado Deis"
+Description: "Sexo Listado Deis"
 * ^experimental = false
 * ^caseSensitive = true
 * ^version = "0.9"
@@ -1687,12 +1686,6 @@ Description: "Prevision"
 * ^contact.telecom.value = "minsal@minsal.cl"
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
-* #01	"FONASA" 
-* #02	"ISAPRE"  
-* #03	"CAPREDENA" 
-* #04	"DIPRECA" 
-* #05	"SISA" 
-* #96	"NINGUNA"
-* #99	"DESCONOCIDO"
-*/
-
+* #1 "uno"
+* #2 "dos"
+* #3 "tres"

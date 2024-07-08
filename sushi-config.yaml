@@ -3,9 +3,9 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: hl7.fhir.cl.clcore
-canonical: https://hl7chile.cl/fhir/ig/clcore
-name: clcore
+id: hl7.fhir.cl.clcore2
+canonical: https://hl7chile.cl/fhir/ig/clcore2
+name: clcore2
 title: Guía de Implementación ''cl core'' FHIR R4, (Versión Evolutiva)
 status: active # draft | active | retired | unknown
 version: 1.8.12
