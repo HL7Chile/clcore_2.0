@@ -1620,37 +1620,37 @@ Description: "Otros identificadores que no sean oficiales del DEIS"
 // * #6 "Otra"
 // * #7 "No Revelado"
 
-ValueSet: VSSexoListadoDeis
-Id: VSSexoListadoDeis
-Title: "Sexo Listado Deis"
-Description: "Sexo Listado Deis"
-* ^experimental = false
-* ^version = "0.1"
-* ^status = #active
-* ^date = "2023-01-15"
-* ^contact.name = "MINSAL CHILE"
-* ^contact.telecom.system = #email
-* ^contact.telecom.value = "minsal@minsal.cl"
-* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+// ValueSet: VSSexoListadoDeis
+// Id: VSSexoListadoDeis
+// Title: "Sexo Listado Deis"
+// Description: "Sexo Listado Deis"
+// * ^experimental = false
+// * ^version = "0.1"
+// * ^status = #active
+// * ^date = "2023-01-15"
+// * ^contact.name = "MINSAL CHILE"
+// * ^contact.telecom.system = #email
+// * ^contact.telecom.value = "minsal@minsal.cl"
+// * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
-* codes from system CSSexoListadoDeis
+// * codes from system CSSexoListadoDeis
 
-CodeSystem: CSSexoListadoDeis
-Id: CSSexoListadoDeis
-Title: "Sexo Listado Deis"
-Description: "Sexo Listado Deis"
-* ^experimental = false
-* ^caseSensitive = true
-* ^version = "0.9"
-* ^status = #active
-* ^date = "2023-01-15"
-* ^contact.name = "MINSAL CHILE"
-* ^contact.telecom.system = #email
-* ^contact.telecom.value = "minsal@minsal.cl"
-* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+// CodeSystem: CSSexoListadoDeis
+// Id: CSSexoListadoDeis
+// Title: "Sexo Listado Deis"
+// Description: "Sexo Listado Deis"
+// * ^experimental = false
+// * ^caseSensitive = true
+// * ^version = "0.9"
+// * ^status = #active
+// * ^date = "2023-01-15"
+// * ^contact.name = "MINSAL CHILE"
+// * ^contact.telecom.system = #email
+// * ^contact.telecom.value = "minsal@minsal.cl"
+// * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
-* #1 "Hombre"
-* #2 "Mujer"
-* #3 "Intersexual"
-* #93 "No Informado"
-* #99 "Desconocido"
+// * #1 "Hombre"
+// * #2 "Mujer"
+// * #3 "Intersexual"
+// * #93 "No Informado"
+// * #99 "Desconocido"
