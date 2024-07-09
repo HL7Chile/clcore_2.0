@@ -16,10 +16,10 @@ Description:    "Este Perfil fue creado para cubrir la descripción de un Presta
 * identifier ^definition = "El identificador oficial para cada prestador en Chile es el Registro Nacional de Prestadores Institucionales (NRPI). Ademas existe el identificador nacional chileno, el Registro Único Nacional (RUN). Y por ultimo puede ingresar un numero de pasaporte y un ID extra para cada prestador."
 
 * identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "type.coding.code"
+* identifier ^slicing.discriminator.path = "type.coding"
 * identifier ^slicing.rules = #open
 * identifier contains run 0..1 MS and rnpi 0..1 MS and pasaporte 0..1 MS and otro 0..1 MS
-* identifier.type from VSTipoIdentificador
+* identifier.type from VSTiposDocumentos
 
 * identifier[run]
   * use MS
@@ -33,7 +33,7 @@ Description:    "Este Perfil fue creado para cubrir la descripción de un Presta
 * identifier[run].value ^short = "Número de RUN"
 * identifier[run].value ^definition = "Valor del RUN en la Cédula de Identidad entregada por el Registro Civil, en formato sin puntos y con guión para diferencia el dígito verificador"
 //* identifier[run].system = "http://registrocivil.cl/run"
-* identifier[run].type.coding.code = #01
+* identifier[run].type.coding = CSTiposDocumentosDEIS#1
 
 * identifier[rnpi]
   * use MS
@@ -46,7 +46,7 @@ Description:    "Este Perfil fue creado para cubrir la descripción de un Presta
 * identifier[rnpi].system ^comment = "Se define el endPoint al cual debe apuntar a la API"
 * identifier[rnpi].value ^short = "Valor identificador"
 * identifier[rnpi].value ^definition = "Valor identificador"
-* identifier[rnpi].type.coding.code = #13
+* identifier[rnpi].type.coding = CSOtrosIdentificadores#13
 
 * identifier[pasaporte]
   * use MS
@@ -59,7 +59,7 @@ Description:    "Este Perfil fue creado para cubrir la descripción de un Presta
 * identifier[pasaporte].system ^comment = "Se define el endPoint al cual debe apuntar a la API"
 * identifier[pasaporte].value ^short = "Valor identificador"
 * identifier[pasaporte].value ^definition = "Valor identificador"
-* identifier[pasaporte].type.coding.code = #05
+* identifier[pasaporte].type.coding = CSTiposDocumentosDEIS#4
 
 * identifier[otro]
   * use MS
@@ -72,7 +72,7 @@ Description:    "Este Perfil fue creado para cubrir la descripción de un Presta
 * identifier[otro].system ^comment = "Se define el endPoint al cual debe apuntar a la API"
 * identifier[otro].value ^short = "Valor identificador"
 * identifier[otro].value ^definition = "Valor identificador"
-* identifier[otro].type.coding.code = #14
+* identifier[otro].type.coding = CSOtrosIdentificadores#14
 
 * active MS
 * name and name.use and name.family and name.given  MS 

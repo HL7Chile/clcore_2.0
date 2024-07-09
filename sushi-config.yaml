@@ -25,7 +25,9 @@ copyright: "Usado con el permiso de HL7 International, todos los derechos reseva
 license: CC0-1.0
 
 
-#dependencies:
+dependencies:
+  #hl7.fhir.cl.minsal.eis: 0.1.1
+  hl7.fhir.cl.minsal.eis: dev
 #  hl7.fhir.uv.ips: 1.0.0
 
 pages:

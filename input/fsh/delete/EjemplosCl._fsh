@@ -300,7 +300,7 @@ Instance: CodigoPaisesLocation
 InstanceOf: CodigoPaises
 Usage: #inline
 
-* valueCodeableConcept = CSCodPaises#152 "Chile"
+* valueCodeableConcept = CSCSPaises#152 "Chile"
 
 
 Instance : LocationEj
@@ -534,7 +534,7 @@ Instance: CodigoPaisesOrganization
 InstanceOf: CodigoPaises
 Usage: #inline
 
-* valueCodeableConcept = CSCodPaises#152 "Chile"
+* valueCodeableConcept = CSCSPaises#152 "Chile"
 
 Instance : PrestadorCL
 Title : "Ejemplo de Recurso Prestador como base para un Core Nacional"

@@ -1,3 +1,16 @@
+### Versión 2.0.0
+
+- Se convalidan los siguientes VS a lo que se encuentra en la EIS
+  - Códigos de Especialidades
+  - Códigos de Regiones en Chile
+  - Códigos de Provincias en Chile
+  - Códigos de Comunas en Chile
+  - Códigos de Países
+
+- VSIdentificadores pasa VSOtrosIdentificadores, se eliminan los códigos que se encuentran en la EIS
+
+- Se crea el CS con CSOtrosIdentificadores
+
 ### Versión 1.8.12
 
 - Perfil [MedicamentoCL](StructureDefinition-CoreMedicamentoCl.html)

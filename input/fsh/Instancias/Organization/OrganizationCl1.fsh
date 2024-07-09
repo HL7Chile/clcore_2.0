@@ -32,22 +32,22 @@ Instance: ComunasClOrganization
 InstanceOf: ComunasCl
 Usage: #inline
 
-* valueCodeableConcept = CSCodComunasCL#13101 "Santiago Centro"
+* valueCodeableConcept = CSComunas#13101 "SANTIAGO"
 
 Instance: ProvinciasClOrganization
 InstanceOf: ProvinciasCl
 Usage: #inline
 
-* valueCodeableConcept = CSCodProvinciasCL#131 "Santiago"
+* valueCodeableConcept = CSProvincia#131 "Santiago"
 
 Instance: RegionesClOrganization
 InstanceOf: RegionesCl
 Usage: #inline
 
-* valueCodeableConcept = CSCodRegionCL#13 "Metropolitana de Santiago"
+* valueCodeableConcept = CSRegion#13 "Metropolitana de Santiago"
 
 Instance: CodigoPaisesOrganization
 InstanceOf: CodigoPaises
 Usage: #inline
 
-* valueCodeableConcept = CSCodPaises#152 "Chile"
+* valueCodeableConcept = CSPaises#152 "Chile"

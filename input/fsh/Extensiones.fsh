@@ -11,7 +11,7 @@ Context: Patient, Practitioner
 // * ^context[=].expression = "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CorePrestadorCl#Practitioner"
 * value[x] only CodeableConcept
 * valueCodeableConcept ^short = "Identidad De Genero"
-* valueCodeableConcept from  VSIdentidaddeGenero
+* valueCodeableConcept from  VSIdentidadGenero
 
 Extension: SexoBiologico
 Id: SexoBiologico
@@ -73,7 +73,7 @@ Description: "Esta extensión incluye códigos de paises"
 * value[x] only CodeableConcept
 * value[x] ^short = "Código del País"
 //* url 1..1 MS
-* valueCodeableConcept from CodPais
+* valueCodeableConcept from VSPaises
 * valueCodeableConcept.coding 0..1 MS
   * code 0..1 MS
   * system 0..1 MS
@@ -81,7 +81,7 @@ Description: "Esta extensión incluye códigos de paises"
 
 * url ^short = "Extensión de dirección del país"
 
-//* valueCodeableConcept.coding.system from CodPaises (extensible)
+//* valueCodeableConcept.coding.system from CSPaises (extensible)
 
 /* 		Extension 		*/
 /*	Comunas Chile	*/
@@ -93,7 +93,7 @@ Context: Address.city
 * value[x] only CodeableConcept
 * value[x] ^short = "Código de Comunas"
 * url 1..1 MS
-* valueCodeableConcept from VSCodigosComunaCL
+* valueCodeableConcept from VSComunas
 * valueCodeableConcept.coding 1..1 MS
   * code 1..1 MS
   * system 0..1 MS
@@ -110,7 +110,7 @@ Context: Address.district
 * value[x] only CodeableConcept
 * value[x] ^short = "Código de Provincias"
 * url 1..1 MS
-* valueCodeableConcept from VSCodigosProvinciasCL
+* valueCodeableConcept from VSProvincia
 * valueCodeableConcept.coding 1..1 MS
   * code 1..1 MS
   * system 0..1 MS
@@ -127,7 +127,7 @@ Context: Address.state
 * value[x] only CodeableConcept
 * value[x] ^short = "Código de Provincias"
 * url 1..1 MS
-* valueCodeableConcept from VSCodigosRegionesCL
+* valueCodeableConcept from VSRegion
 * valueCodeableConcept.coding 1..1 MS
   * code 1..1 MS
   * code 
@@ -163,7 +163,7 @@ Context: Patient.contact
 * extension[docProc] ^short = "País de procedencia del documento"
 * extension[docProc].value[x] only CodeableConcept
 * extension[docProc].url MS
-* extension[docProc].valueCodeableConcept from CodPaises (required)
+* extension[docProc].valueCodeableConcept from VSPaises (required)
 * extension[docProc].valueCodeableConcept 1..1 MS
 * extension[docProc].valueCodeableConcept.coding 1..1 MS
 * extension[docProc].valueCodeableConcept.coding.code 1..1 MS

@@ -36,7 +36,7 @@ Description: "Esta extensión incluye códigos de paises de origen"
   * code from CodPais
   * system 0..1 MS
   * display 0..1 MS
-//* valueCodeableConcept.coding.system from CodPaises (extensible)
+//* valueCodeableConcept.coding.system from CSPaises (extensible)
 
 /* 		Extension 		*/
 /*	Comunas Chile	*/
@@ -113,7 +113,7 @@ Description: "Identificación de contacto de paciente en especial para casos en 
 * extension[docProc] ^short = "País de procedencia del documento"
 * extension[docProc].value[x] only CodeableConcept
 * extension[docProc].url MS
-* extension[docProc].valueCodeableConcept from CodPaises (required)
+* extension[docProc].valueCodeableConcept from CSPaises (required)
 * extension[docProc].valueCodeableConcept 1..1 MS
 * extension[docProc].valueCodeableConcept.coding 1..1 MS
 * extension[docProc].valueCodeableConcept.coding.code 1..1 MS

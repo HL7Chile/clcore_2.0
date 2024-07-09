@@ -49,7 +49,7 @@ Description:    "Este Perfil ha sido desarrollado para cubrir las necesidades de
 * specialty MS
 * specialty ^short = "Definición de la especialidad médica según DEIS"
 * specialty ^definition = "Definición de la especialidad médica según DEIS, en el decreto correspondiete. la tabla sigue siendo extensible ante futuros elementos agregados a esta"
-* specialty from VSEspecialidadesDeisCL (required)
+* specialty from VSEspecialidadMedica (required)
 * specialty ^binding.description = "Códigos de Especialidad DEIS" 
 
 

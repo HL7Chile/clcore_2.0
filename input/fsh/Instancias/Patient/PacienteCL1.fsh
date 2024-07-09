@@ -10,9 +10,7 @@ Usage : #example
 //Identificación por Cédula Chilena
 * identifier.use = #official    //obligado
 * identifier.type.extension[paisEmisionDocumento] = PaisEmisionDocumentoPacienteCL
-* identifier.type.coding.system = "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodigoDNI"
-* identifier.type.coding.code = #NNCHL
-* identifier.type.coding.display = "Chile"
+* identifier.type.coding  = CSCodigoDNI#NNCHL "Chile"
 
 * identifier.system = "http://regcivil.cl/Validacion/RUN"
 * identifier.value = "15.236.327-k"
@@ -57,7 +55,7 @@ Usage : #example
 * contact.name.given[0] = "Juana"
 * contact.name.given[+] = "Josefa"
 
-* communication.language.coding = https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodigoslenguaje#es-CL "Spanish"
+* communication.language.coding = CSCodigoslenguaje#es-CL "Spanish"
 
 * generalPractitioner = Reference(OrganizacionClEjemplo1)
 
@@ -65,7 +63,7 @@ Instance: PaisEmisionDocumentoPacienteCL
 InstanceOf: CodigoPaises
 Usage: #inline
 
-* valueCodeableConcept = CSCodPaises#152 "Chile"
+* valueCodeableConcept = CSPaises#152 "Chile"
 
 Instance: SegundoApellidoPacienteCL
 InstanceOf: SegundoApellido
@@ -88,36 +86,36 @@ Instance: ComunasClPacienteCL
 InstanceOf: ComunasCl
 Usage: #inline
 
-* valueCodeableConcept = CSCodComunasCL#05602 "Algarrobo"
+* valueCodeableConcept = CSComunas#5602 "Algarrobo"
 
 Instance: ProvinciasClPacienteCL
 InstanceOf: ProvinciasCl
 Usage: #inline
 
-* valueCodeableConcept = CSCodProvinciasCL#056 "San Antonio"
+* valueCodeableConcept = CSProvincia#056 "San Antonio"
 
 Instance: RegionesClPacienteCL
 InstanceOf: RegionesCl
 Usage: #inline
 
-* valueCodeableConcept = CSCodRegionCL#05 "Valparaíso"
+* valueCodeableConcept = CSRegion#5 "Valparaíso"
 
 Instance: CodigoPaisesPacienteCL
 InstanceOf: CodigoPaises
 Usage: #inline
 
-* valueCodeableConcept = CSCodPaises#152 "Chile"
+* valueCodeableConcept = CSPaises#152 "Chile"
 
 Instance: IdentificacionContactoPacienteCL
 InstanceOf: IdentificacionContactoCl
 Usage: #inline
 
 * extension[tutId].valueIdentifier
-  * type = https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodigoDNI#NNCHL "Chile"
+  * type = CSCodigoDNI#NNCHL "Chile"
   * system = "http://regcivil.cl/Validacion/RUN"
   * value = "8987321-7"
 
-* extension[docProc].valueCodeableConcept = CSCodPaises#152 "Chile"
+* extension[docProc].valueCodeableConcept = CSPaises#152 "Chile"
 
 Instance: SegundoApellidoContactoPacienteCL
 InstanceOf: SegundoApellido
@@ -129,7 +127,7 @@ Instance: IdentidadDeGeneroPacienteCl
 InstanceOf: IdentidadDeGenero
 Usage: #inline
 
-* valueCodeableConcept = CSIdentidaddeGenero#1 "Masculino"
+* valueCodeableConcept = CSIdentidadGenero#1 "Masculino"
 
 
 Instance: SexoBiologicoPacienteCl

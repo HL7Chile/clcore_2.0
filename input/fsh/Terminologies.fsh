@@ -76,7 +76,8 @@ Description: "Tipos de Documentos para identificación según tabla HL7 V3 y Cod
 
 * codes from system CSCodigoDNI
 * codes from system http://terminology.hl7.org/CodeSystem/v2-0203
-* codes from system CSTipoIdentificador
+* codes from valueset VSTiposDocumentosDEIS
+* codes from valueset VSOtrosIdentificadores
 
 
 CodeSystem: CSCodigoDNI
@@ -127,8 +128,8 @@ Description: "Códigos para los DNI de países de America Latina y el Caribe seg
 * #NNVCT "San Vicente y las Granadinas"
 * #NNTTO "Trinidad y Tobago"
 
-
-ValueSet: CodPaises
+/*
+ValueSet: CSPaises
 Id: CodPais
 Title: "Códigos de Países"
 Description: "Codigos definidos para la identificación de países segun norma ISO3166-N"
@@ -142,9 +143,9 @@ Description: "Codigos definidos para la identificación de países segun norma I
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 * ^copyright = "All content on ISO Online is copyright protected. The copyright is owned by ISO. Any use of the content, including copying of it in whole or in part, for example to another Internet site, is prohibited and would require written permission from ISO."
 
-* include codes from system CSCodPaises
+* include codes from system CSCSPaises
 
-CodeSystem: CSCodPaises
+CodeSystem: CSCSPaises
 Id: CodPais
 Title: "Códigos de Países"
 Description: "Codigos definidos para la identificación de países segun norma ISO3166-N"
@@ -408,7 +409,8 @@ Description: "Codigos definidos para la identificación de países segun norma I
 * #882 "Samoa"
 * #887 "Yemen"
 * #894 "Zambia"
-
+*/
+/*
 ValueSet: VSEspecialidadesDeisCL
 Id: VSEspecialidadesDeisCL
 Title: "Códigos de Especialidades"
@@ -555,6 +557,7 @@ Description:  "Códigos de Regiones para Chile según Códigos Únicos Territori
 * #12 "Magallanes y de la Antártica Chilena"
 * #16 "Ñuble"
 
+
 ValueSet: VSCodigosProvinciasCL
 Id: VSCodigosProvinciasCL
 Title: "Códigos de Provincias en Chile"
@@ -640,7 +643,6 @@ Description:  "Códigos de Provincias para Chile según Códigos Únicos Territo
 * #124 "última Esperanza"
 * #141 "Valdivia"
 * #051 "Valparaíso"
-
 
 ValueSet: VSCodigosComunaCL
 Id: VSCodigosComunaCL
@@ -1019,6 +1021,7 @@ Description:  "Códigos de Comunas para Chile según Códigos Únicos Territoria
 * #08313 "Yumbel"
 * #16109 "Yungay"
 * #05405 "Zapallar"
+*/
 
 ValueSet: VSTiposDocClinico
 Id: VSTiposDocClinico
@@ -1541,10 +1544,10 @@ Description: "Códigos de las razones por la cual un encuentro remoto no pudo re
 * #otros "Otros, texto libre" "Cualquier otro motivo"
 */
 
-ValueSet: VSTipoIdentificador
-Id: VSTipoIdentificador
-Title: "Tipo Identificador"
-Description: "Tipo Identificador"
+ValueSet: VSOtrosIdentificadores
+Id: VSOtrosIdentificadores
+Title: "Otro Tipo Identificador"
+Description: "Otros identificadores que no sean oficiales del DEIS"
 * ^experimental = false
 * ^version = "1.0.0"
 * ^status = #active
@@ -1554,12 +1557,12 @@ Description: "Tipo Identificador"
 * ^contact.telecom.value = "interoperabilidad@minsal.cl"
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
-* codes from system CSTipoIdentificador
+* codes from system CSOtrosIdentificadores
 
-CodeSystem: CSTipoIdentificador
-Id: CSTipoIdentificador
-Title: "Tipo Identificador"
-Description: "Tipo Identificador"
+CodeSystem: CSOtrosIdentificadores
+Id: CSOtrosIdentificadores
+Title: "Otros Identificadores"
+Description: "Otros identificadores que no sean oficiales del DEIS"
 * ^experimental = false
 * ^caseSensitive = true
 * ^version = "1.0.0"
@@ -1570,12 +1573,7 @@ Description: "Tipo Identificador"
 * ^contact.telecom.value = "interoperabilidad@minsal.cl"
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
-* #01 "RUN" "Rol Único Nacional"
 * #02 "RUN Provisorio" "RUN provisorio (Artículo 44)"
-* #03 "RUN Madre" "RUN Madre (para recién nacido)"
-* #04 "Número Folio" "Número Folio Comprobante de Parto chileno"
-* #05 "PPN" "Pasaporte"
-* #06 "Documento de identificación del país de origen" "Documento de identificación del país de origen"
 * #07 "Acta de nacimiento del país de origen" "Acta de nacimiento del país de origen"
 * #08 "NIP" "Número de Identificación Provisorio (NIP)"
 * #09 "NIC" "Número Identificatorio para cotizar (NIC)"
@@ -1585,42 +1583,42 @@ Description: "Tipo Identificador"
 * #13 "RNPI" "Registro Nacional de Prestadores Individuales"
 * #14 "OTRO" "Otro tipo de identificador"
 
-ValueSet: VSIdentidaddeGenero
-Id: VSIdentidaddeGenero
-Title: "Identidad de Genero"
-Description: "Identidad de Genero"
-* ^experimental = false
-* ^version = "0.1"
-* ^status = #active
-* ^date = "2023-01-15"
-* ^contact.name = "MINSAL CHILE"
-* ^contact.telecom.system = #email
-* ^contact.telecom.value = "minsal@minsal.cl"
-* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+// ValueSet: VSIdentidaddeGenero
+// Id: VSIdentidaddeGenero
+// Title: "Identidad de Genero"
+// Description: "Identidad de Genero"
+// * ^experimental = false
+// * ^version = "0.1"
+// * ^status = #active
+// * ^date = "2023-01-15"
+// * ^contact.name = "MINSAL CHILE"
+// * ^contact.telecom.system = #email
+// * ^contact.telecom.value = "minsal@minsal.cl"
+// * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
-* codes from system CSIdentidaddeGenero
+// * codes from system CSIdentidaddeGenero
 
-CodeSystem: CSIdentidaddeGenero
-Id: CSIdentidaddeGenero
-Title: "Identidad de Genero"
-Description: "Identidad de Genero"
-* ^experimental = false
-* ^caseSensitive = true
-* ^version = "0.9"
-* ^status = #active
-* ^date = "2023-01-15"
-* ^contact.name = "MINSAL CHILE"
-* ^contact.telecom.system = #email
-* ^contact.telecom.value = "minsal@minsal.cl"
-* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+// CodeSystem: CSIdentidaddeGenero
+// Id: CSIdentidaddeGenero
+// Title: "Identidad de Genero"
+// Description: "Identidad de Genero"
+// * ^experimental = false
+// * ^caseSensitive = true
+// * ^version = "0.9"
+// * ^status = #active
+// * ^date = "2023-01-15"
+// * ^contact.name = "MINSAL CHILE"
+// * ^contact.telecom.system = #email
+// * ^contact.telecom.value = "minsal@minsal.cl"
+// * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
-* #1 "Masculino"
-* #2 "Femenina"
-* #3 "Transgénero Masculino"
-* #4 "Transgénero Femenina"
-* #5 "No binarie"
-* #6 "Otra"
-* #7 "No Revelado"
+// * #1 "Masculino"
+// * #2 "Femenina"
+// * #3 "Transgénero Masculino"
+// * #4 "Transgénero Femenina"
+// * #5 "No binarie"
+// * #6 "Otra"
+// * #7 "No Revelado"
 
 ValueSet: VSSexoListadoDeis
 Id: VSSexoListadoDeis
@@ -1656,36 +1654,3 @@ Description: "Sexo Listado Deis"
 * #3 "Intersexual"
 * #93 "No Informado"
 * #99 "Desconocido"
-
-ValueSet: VStest2
-Id: VStest2
-Title: "Sexo Listado Deis"
-Description: "Sexo Listado Deis"
-* ^experimental = false
-* ^version = "0.1"
-* ^status = #active
-* ^date = "2023-01-15"
-* ^contact.name = "MINSAL CHILE"
-* ^contact.telecom.system = #email
-* ^contact.telecom.value = "minsal@minsal.cl"
-* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
-
-* codes from system CStest2
-
-CodeSystem: CStest2
-Id: CStest2
-Title: "Sexo Listado Deis"
-Description: "Sexo Listado Deis"
-* ^experimental = false
-* ^caseSensitive = true
-* ^version = "0.9"
-* ^status = #active
-* ^date = "2023-01-15"
-* ^contact.name = "MINSAL CHILE"
-* ^contact.telecom.system = #email
-* ^contact.telecom.value = "minsal@minsal.cl"
-* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
-
-* #1 "uno"
-* #2 "dos"
-* #3 "tres"
