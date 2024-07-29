@@ -1,20 +1,15 @@
-### Versión 2.0.0
-
-- Se convalidan los siguientes VS a lo que se encuentra en la EIS
-  - Códigos de Especialidades
-  - Códigos de Regiones en Chile
-  - Códigos de Provincias en Chile
-  - Códigos de Comunas en Chile
-  - Códigos de Países
-
-- VSIdentificadores pasa VSOtrosIdentificadores, se eliminan los códigos que se encuentran en la EIS
-
-- Se crea el CS con CSOtrosIdentificadores
-
-### Versión 1.8.12
+### Versión 1.9.0
 
 - Perfil [MedicamentoCL](StructureDefinition-CoreMedicamentoCl.html)
   - Se elimina los Slice de **DescriptionID** y **ConceptID**.
+  - Se agregan al MS los siguientes datos:
+    - code
+    - form
+    - manufacture
+    - ingredent:
+      - item
+      - isActive
+      - strength
   - Se cambian las descripciones y definiciones que referencien a la TFC.
   - Se habilitan los ejemplo:
     * [Medicamento comprimido Tareg - D 160](Medication-MedicamentoCl.html)
@@ -34,6 +29,7 @@
   - Se genera [Ejemplo de Recurso Paciente Nacional](Patient-PacienteCL.html)
 
 - Perfil [CoreRolClinicoCl](StructureDefinition-CoreRolClinicoCl.html)
+  - Se modifica la descripción
   - Se modifica la referencia organization al **OrganizationCL**
   - Se modifica la referencia location al **CoreLocalizacionCl**
   - Se genera ejemplo [Ejemplo de Recurso de especialidad](PractitionerRole-EjemploEspecialidadCL.html)

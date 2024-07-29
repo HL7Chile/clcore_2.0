@@ -10,7 +10,9 @@ Usage : #example
 //Identificación por Cédula Chilena
 * identifier.use = #official    //obligado
 * identifier.type.extension[paisEmisionDocumento] = PaisEmisionDocumentoPacienteCL
-* identifier.type.coding  = CSCodigoDNI#NNCHL "Chile"
+* identifier.type.coding.system = "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodigoDNI"
+* identifier.type.coding.code = #NNCHL
+* identifier.type.coding.display = "Chile"
 
 * identifier.system = "http://regcivil.cl/Validacion/RUN"
 * identifier.value = "15.236.327-k"
@@ -63,7 +65,7 @@ Instance: PaisEmisionDocumentoPacienteCL
 InstanceOf: CodigoPaises
 Usage: #inline
 
-* valueCodeableConcept = CSPaises#152 "Chile"
+* valueCodeableConcept = CSCodPaises#152 "Chile"
 
 Instance: SegundoApellidoPacienteCL
 InstanceOf: SegundoApellido
@@ -86,36 +88,36 @@ Instance: ComunasClPacienteCL
 InstanceOf: ComunasCl
 Usage: #inline
 
-* valueCodeableConcept = CSComunas#5602 "Algarrobo"
+* valueCodeableConcept = CSCodComunasCL#05602 "Algarrobo"
 
 Instance: ProvinciasClPacienteCL
 InstanceOf: ProvinciasCl
 Usage: #inline
 
-* valueCodeableConcept = CSProvincia#056 "San Antonio"
+* valueCodeableConcept = CSCodProvinciasCL#056 "San Antonio"
 
 Instance: RegionesClPacienteCL
 InstanceOf: RegionesCl
 Usage: #inline
 
-* valueCodeableConcept = CSRegion#5 "Valparaíso"
+* valueCodeableConcept = CSCodRegionCL#05 "Valparaíso"
 
 Instance: CodigoPaisesPacienteCL
 InstanceOf: CodigoPaises
 Usage: #inline
 
-* valueCodeableConcept = CSPaises#152 "Chile"
+* valueCodeableConcept = CSCodPaises#152 "Chile"
 
 Instance: IdentificacionContactoPacienteCL
 InstanceOf: IdentificacionContactoCl
 Usage: #inline
 
 * extension[tutId].valueIdentifier
-  * type = CSCodigoDNI#NNCHL "Chile"
+  * type = https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodigoDNI#NNCHL "Chile"
   * system = "http://regcivil.cl/Validacion/RUN"
   * value = "8987321-7"
 
-* extension[docProc].valueCodeableConcept = CSPaises#152 "Chile"
+* extension[docProc].valueCodeableConcept = CSCodPaises#152 "Chile"
 
 Instance: SegundoApellidoContactoPacienteCL
 InstanceOf: SegundoApellido
@@ -127,7 +129,7 @@ Instance: IdentidadDeGeneroPacienteCl
 InstanceOf: IdentidadDeGenero
 Usage: #inline
 
-* valueCodeableConcept = CSIdentidadGenero#1 "Masculino"
+* valueCodeableConcept = CSIdentidaddeGenero#1 "Masculino"
 
 
 Instance: SexoBiologicoPacienteCl

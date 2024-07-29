@@ -49,22 +49,22 @@ Instance: ComunasClLocation
 InstanceOf: ComunasCl
 Usage: #inline
 
-* valueCodeableConcept = CSComunas#5109 "VIÑA DEL MAR"
+* valueCodeableConcept = CSCodComunasCL#05109 "Viña del Mar"
 
 Instance: ProvinciasClLocation
 InstanceOf: ProvinciasCl
 Usage: #inline
 
-* valueCodeableConcept = CSProvincia#051 "Valparaíso"
+* valueCodeableConcept = CSCodProvinciasCL#051 "Valparaíso"
 
 Instance: RegionesClLocation
 InstanceOf: RegionesCl
 Usage: #inline
 
-* valueCodeableConcept = CSRegion#5 "Valparaíso"
+* valueCodeableConcept = CSCodRegionCL#05 "Valparaíso"
 
 Instance: CodigoPaisesLocation
 InstanceOf: CodigoPaises
 Usage: #inline
 
-* valueCodeableConcept = CSPaises#152 "Chile"
+* valueCodeableConcept = CSCodPaises#152 "Chile"

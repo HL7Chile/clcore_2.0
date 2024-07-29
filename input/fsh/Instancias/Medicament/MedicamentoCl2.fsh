@@ -9,9 +9,10 @@ Usage: #example
   * system = "http://minsal.cl/semantikos/description-id"
   * value = "1703591000167111"
 
-* identifier[+]
+* identifier[1]
   * use = #official
   * system = "http://minsal.cl/semantikos/concept-id"
   * value = "696681000167108"
 
 * code.text = "Hidroclorotiazida 25 mg + Valsartán 160 mg comprimido"
+* manufacturer = Reference (EjemploLaboratorio1)

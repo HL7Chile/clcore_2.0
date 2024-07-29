@@ -7,12 +7,12 @@ InstanceOf : CorePrestadorCl
 * identifier[run]
   * use = #official
   * value = "17435678-2"
-  * type = CSTiposDocumentosDEIS#1 "RUN"
+  * type = CSTipoIdentificador#01 "RUN"
 
 * identifier[rnpi]
   * use = #official
   * value = "43212"
-  * type = CSOtrosIdentificadores#13 "RNPI"
+  * type = CSTipoIdentificador#13 "RNPI"
 
 //registro de prestador activo
 * active = true
@@ -99,25 +99,25 @@ Instance: ComunasClPrestadorCL2
 InstanceOf: ComunasCl
 Usage: #inline
 
-* valueCodeableConcept = CSComunas#13101 "Santiago"
+* valueCodeableConcept = CSCodComunasCL#13101 "Santiago Centro"
 
 Instance: ProvinciasClPrestadorCL2
 InstanceOf: ProvinciasCl
 Usage: #inline
 
-* valueCodeableConcept = CSProvincia#131 "Santiago"
+* valueCodeableConcept = CSCodProvinciasCL#131 "Santiago"
 
 Instance: RegionesClPrestadorCL2
 InstanceOf: RegionesCl
 Usage: #inline
 
-* valueCodeableConcept = CSRegion#13 "Metropolitana de Santiago"
+* valueCodeableConcept = CSCodRegionCL#13 "Metropolitana de Santiago"
 
 Instance: CodigoPaisesPrestadorCL2
 InstanceOf: CodigoPaises
 Usage: #inline
 
-* valueCodeableConcept = CSPaises#152 "Chile"
+* valueCodeableConcept = CSCodPaises#152 "Chile"
 
 Instance: SegundoApellidoPrestadorCL2
 InstanceOf: SegundoApellido

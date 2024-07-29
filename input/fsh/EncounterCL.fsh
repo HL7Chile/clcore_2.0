@@ -38,16 +38,17 @@ Description: "Definición de encuentro clínico genérico para Chile"
 //  * extension ^definition = "Se usa esta extensión para agregar las razones por las cuales no se pudo llevar a cabo el encuentro remoto"
 //  * extension contains RazonNOTatencionCL named reasonCode 0..1
 /*El siguiente Código permite agregar bindings adicionales, pero genera errores de QA Utilizar con precausión*/
-/*
-  * ^binding.extension[0].url = $additional-binding 
-  * ^binding.extension[=].extension[0].url = "purpose"
-  * ^binding.extension[=].extension[=].valueCode = #candidate
-  * ^binding.extension[=].extension[+].url = "valueSet"
-  * ^binding.extension[=].extension[=].valueCanonical = "https://hl7chile.cl/fhir/ig/clcore/ValueSet/VSRazonNOT"
-*/  
+
+// * reasonCode ^binding.extension[0].extension[0].url = "purpose"
+// * reasonCode ^binding.extension[=].extension[=].valueCode = #candidate
+// * reasonCode ^binding.extension[=].extension[+].url = "valueSet"
+// * reasonCode ^binding.extension[=].extension[=].valueCanonical = "https://hl7chile.cl/fhir/ig/clcore/ValueSet/VSRazonNOT"
+// * reasonCode ^binding.extension[=].extension[+].url = "documentation"
+// * reasonCode ^binding.extension[=].extension[=].valueMarkdown = "razones por las cuales no pudo ser presentado"
+// * reasonCode ^binding.extension[=].url = $additional-binding 
 
 * subject MS
-* subject only Reference (PacienteCl)
+* subject only Reference(PacienteCl)
   * ^short = "Referencia al paciente del encuentro"
   * ^definition = "La referencia al paciente que está presente en el encuentro clínico sobre un paciente nacional."
 
@@ -62,7 +63,7 @@ Description: "Definición de encuentro clínico genérico para Chile"
   * type ^short = "Rol del participante en el encuentro"
   * individual 1..1 MS
   * individual ^short = "Referencia al participante"
-  * individual  only Reference (PrestadorCL or CoreRolClinicoCl)
+  * individual  only Reference(PrestadorCL or CoreRolClinicoCl)
 
 // * participant ^slicing.discriminator.type = #value
 // * participant ^slicing.discriminator.path = "type.coding.code"
@@ -98,12 +99,12 @@ Description: "Definición de encuentro clínico genérico para Chile"
 * diagnosis ^short = "Diagnóstico relevante para este encuentro"
 * diagnosis ^definition = "Diagnóstico relevante para este encuentro"
 * diagnosis.condition ^short = "El diagnóstico o procedimiento relevante para el encuentro"
-* diagnosis.condition only Reference (DiagnosticoCl)
+* diagnosis.condition only Reference(DiagnosticoCl)
 //* diagnosis.extension contains ObservacionesNotas named observaciones 0..1
 
 * serviceProvider MS
 * serviceProvider ^short = "La organización (instalación) responsable de este encuentro"
-* serviceProvider only Reference (OrganizacionCL)
+* serviceProvider only Reference(OrganizacionCL)
 
 * period 0..1 MS
 * period ^short = "La hora de inicio y finalización del encuentro"
