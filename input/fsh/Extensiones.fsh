@@ -282,5 +282,13 @@ Context: HumanName.family
 * value[x] only string
 * valueString ^short = "Segundo apellido de la persona"
 
-
+Extension:   NombreComercial
+Id:          NombreComercial
+Title:       "Nombre Comercial Fármaco"
+Description: "Nombre comercial del fármaco prescrito"
+Context: CoreMedicamentoCl
+* value[x] only string
+* value[x] ^short = "Nombre Comercial"
+* url 1..1 MS
+* valueString 1..1 MS
 

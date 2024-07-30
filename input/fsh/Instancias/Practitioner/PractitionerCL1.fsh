@@ -7,7 +7,7 @@ InstanceOf : CorePrestadorCl
 * identifier[run]
   * use = #official
   * value = "8336277-3"
-  * type = CSTipoIdentificador#01 "RUN"
+  * type = CSTiposDocumentosDEIS#1 "RUN"
 
 //registro de prestador activo
 * active = true
@@ -88,25 +88,25 @@ Instance: ComunasClPrestadorCL
 InstanceOf: ComunasCl
 Usage: #inline
 
-* valueCodeableConcept = CSCodComunasCL#05602 "Algarrobo"
+* valueCodeableConcept = CSComunas#5602 "Algarrobo"
 
 Instance: ProvinciasClPrestadorCL
 InstanceOf: ProvinciasCl
 Usage: #inline
 
-* valueCodeableConcept = CSCodProvinciasCL#056 "San Antonio"
+* valueCodeableConcept = CSProvincia#056 "SAN ANTONIO"
 
 Instance: RegionesClPrestadorCL
 InstanceOf: RegionesCl
 Usage: #inline
 
-* valueCodeableConcept = CSCodRegionCL#05 "Valparaíso"
+* valueCodeableConcept = CSRegion#5 "Valparaíso"
 
 Instance: CodigoPaisesPrestadorCL
 InstanceOf: CodigoPaises
 Usage: #inline
 
-* valueCodeableConcept = CSCodPaises#152 "Chile"
+* valueCodeableConcept = CSPaises#152 "Chile"
 
 Instance: SegundoApellidoPrestadorCL
 InstanceOf: SegundoApellido

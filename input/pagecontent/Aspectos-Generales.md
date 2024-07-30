@@ -399,7 +399,7 @@ Además cada ejemplo viene descrito en 4 formatos:
               "coding": [
                 {
                   "code": "056",
-                  "system": "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodProvinciasCL",
+                  "system": "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSProvincia",
                   "display": "San Antonio"
                 }
               ]
