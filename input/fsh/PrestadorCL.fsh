@@ -25,6 +25,7 @@ Description:    "Este Perfil fue creado para cubrir la descripción de un Presta
   * use MS
   * system MS
   * value MS
+* identifier[run] only IdentifierRut
 * identifier[run] ^short = "Identificador destinado a almacenar el número de RUN" 
 * identifier[run] ^definition = "Corresponde al identificador (RUN) otorgado el Registro Civil de Chile"
 * identifier[run].system ^short = "endPoint que valida el RUN"

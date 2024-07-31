@@ -4,10 +4,8 @@ Description: "Ejemplo de un Prestador no Real con identificadores en Systemas co
 InstanceOf : CorePrestadorCl
 
 //Identificación por Cédula Chilena
-* identifier[run]
-  * use = #official
-  * value = "8336277-3"
-  * type = CSTiposDocumentosDEIS#1 "RUN"
+* identifier[run] = RUNPractitioner
+  
 
 //registro de prestador activo
 * active = true
@@ -113,3 +111,20 @@ InstanceOf: SegundoApellido
 Usage: #inline
 
 * valueString = "Reyes"
+
+Instance: RUNPractitioner
+InstanceOf: IdentifierRut
+Usage: #inline
+
+* extension[DigitoVerificador] = DVPractitioner
+* use = #official
+* type = CSTiposDocumentosDEIS#1 "RUN"
+* value = "8336277"
+
+Instance: DVPractitioner
+InstanceOf: DigitoVerificador
+Usage: #inline
+
+* valueString = "3"
+
+

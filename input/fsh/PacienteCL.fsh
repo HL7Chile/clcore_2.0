@@ -60,8 +60,8 @@ Description:    "Este Perfil ha sido desarrollado para cubrir las necesidades de
 * identifier ^slicing.ordered = false
 
 * identifier contains RUN 0..1 MS
-* identifier[RUN] only IdentifierRun
-* identifier[RUN]
+* identifier[RUN] only IdentifierRut
+* identifier[RUN] 
   * ^short = "Identifier Utilizado para todos los Run o Rut"
   * type = CSTiposDocumentosDEIS#1 "RUN"
 
@@ -189,38 +189,3 @@ Description:    "Este Perfil ha sido desarrollado para cubrir las necesidades de
   * display MS
   * display ^short = "Texto alternativo a la referencia"
   * display ^definition = "Texto alternativo a la referencia"
-
-Extension: DigitoVerificador
-Id: DigitoVerificador
-Title: "Extension para Digito Verificador"
-Description: "Extension para Digito Verificador del Run o Rut"
-Context: Identifier
-
-* obeys cl-dv-1
-* value[x] only string 
-* valueString 1..1 MS
-* valueString ^short = "Debe permitir un unico valor numérico, incluido el cero y letra K mayúsculas o minúscula"
-
-Profile: IdentifierRun
-Parent: Identifier
-Id: cl-identifier-run
-Title: "Identifier Run"
-Description: "Identifier de un RUT o Run"
-
-* obeys cl-ident-1
-* extension contains DigitoVerificador named DigitoVerificador 1..1 MS
-* extension[DigitoVerificador] ^short = "Debe permitir valor numérico, incluido el cero y letra K mayúsculas o minúscula"
-//* extension[DigitoVerificador].valueString obeys cl-dv-1
-//* type = CSTiposDocumentosDEIS#1 "RUN"
-* value 1..1 MS
-* value ^short = "Debe permitir valores en formato numérico, enteros, con valores máximos 99999999"
-
-Invariant:   cl-ident-1
-Description: "Debe permitir valores en formato numérico, enteros, con valores máximos 99999999"
-Severity:    #error
-Expression:  "value.matches('[0-9]+') and value.toInteger() < 99999999"
-
-Invariant:   cl-dv-1
-Description: "Debe permitir un unico valor valor numérico, incluido el cero y letra K mayúsculas o minúscula"
-Severity:    #error
-Expression:  "valueString.matches('[0-9kK]+') and valueString.length() = 1"

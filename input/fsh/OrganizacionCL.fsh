@@ -13,6 +13,16 @@ Description:    "Este Perfil ha sido desarrollado para cubrir las necesidades de
 * identifier.system ^short = "indicador del sistema de indentificación usado pora determinar el valor del identificador"
 * identifier.system ^definition = "Se debe aun definir un ValueSet para estos casos"
 
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.rules = #open
+* identifier ^slicing.description = "Diferenciación por tipo de identifier"
+* identifier ^slicing.ordered = false
+
+* identifier contains RUT 0..1 MS
+* identifier[RUT] only IdentifierRut
+  * system = "https://sii.cl"
+
 * name and alias MS
 * name ^short = "Nombre Legal de la Organizacion" 
 * name ^definition = "Nombre Legal de la Organización"

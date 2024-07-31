@@ -139,7 +139,7 @@ Usage: #inline
 * valueCodeableConcept = CSadministrative-gender#male "Male"
 
 Instance: RUN
-InstanceOf: IdentifierRun
+InstanceOf: IdentifierRut
 Usage: #inline
 * extension[DigitoVerificador] = DV
 * type = CSTiposDocumentosDEIS#1 "RUN"

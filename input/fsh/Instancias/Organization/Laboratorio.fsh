@@ -6,9 +6,7 @@ Usage : #example
 
 
 * active = true
-* identifier
-  * system = "https://sii.cl"
-  * value = "785943520-7"
+* identifier[RUT] = RUTOrg
 
 * name = "Laboratorio ACME de Chile"	
 	
@@ -51,3 +49,16 @@ InstanceOf: CodigoPaises
 Usage: #inline
 
 * valueCodeableConcept = CSPaises#152 "Chile"
+
+Instance: RUTOrg
+InstanceOf: IdentifierRut
+Usage: #inline
+* extension[DigitoVerificador] = DVOrg
+* system = "https://sii.cl"
+* value = "78594352"
+ 
+Instance: DVOrg
+InstanceOf: DigitoVerificador
+Usage: #inline
+
+* valueString = "7"
