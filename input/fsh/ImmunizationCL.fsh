@@ -1,7 +1,7 @@
-Profile: ImmunizationCL
-Parent: Immunization
-Id: ImmunizationCL
-Title: "CL Inmunización"
+Profile:     ImmunizationCL
+Parent:      Immunization
+Id:          ImmunizationCL
+Title:       "CL Inmunización"
 Description: "Definición de un evento de inmunización para las necesidades de interoperabilidad en Chile."
 
 * ^version = "1.10.0"

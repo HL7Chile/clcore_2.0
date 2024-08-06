@@ -411,20 +411,7 @@ Description: "Codigos definidos para la identificación de países segun norma I
 * #894 "Zambia"
 */
 /*
-ValueSet: VSEspecialidadesDeisCL
-Id: VSEspecialidadesDeisCL
-Title: "Códigos de Especialidades"
-Description: "Códigos de especialidades médicas descritas según DEIS"
-* ^experimental = false
-* ^version = "1.0.0"
-* ^status = #active
-* ^date = "2022-01-18T00:00:00-03:00"
-* ^contact.name = "HL7 Chile"
-* ^contact.telecom.system = #email
-* ^contact.telecom.value = "chair@hl7chile.cl"
-* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
-* codes from system CSEspecialidadesDeisCL
 
 CodeSystem: CSEspecialidadesDeisCL
 Id: CSEspecialidadesDeisCL
@@ -1654,3 +1641,61 @@ Description: "Otros identificadores que no sean oficiales del DEIS"
 // * #3 "Intersexual"
 // * #93 "No Informado"
 // * #99 "Desconocido"
+
+ValueSet: VSEspecialidadesCL
+Id: VSEspecialidadesCL
+Title: "Códigos de Especialidades"
+Description: "Códigos de especialidades médicas descrita de varias fuentes"
+* ^experimental = false
+* ^version = "1.0.0"
+* ^status = #active
+* ^date = "2022-01-18T00:00:00-03:00"
+* ^contact.name = "HL7 Chile"
+* ^contact.telecom.system = #email
+* ^contact.telecom.value = "chair@hl7chile.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
+
+* codes from valueset VSEspecialidadMedica
+* codes from valueset VSEspecialidadOdontologica
+* codes from valueset VSEspecialidadBioquimica
+* codes from valueset VSEspecialidadFarma
+* codes from system EspecialidadesConacemConaceoCS
+
+CodeSystem:  EspecialidadesConacemConaceoCS
+Id:          EspecialidadesConacemConaceoCS
+Title:       "Códigos de Especialidades de CONACEM y CONACEO"
+Description: "Códigos a usar para las Especialidades provenientes de La Corporación Nacional Autónoma de Certificación de Especialidades Médicas (CONACEM) y de La Corporación Nacional Autónoma de Certificación de Especialidades Odontológicas (CONACEO) de Chile"
+* ^version = "1.0"
+* ^caseSensitive = true
+* ^experimental = true
+* ^status = #active
+* ^publisher = "HL7 Chile"
+* ^contact.name = "HL7 Chile"
+* ^contact.telecom.system = #email
+* ^contact.telecom.value = "chair@hl7chile.cl"
+* ^jurisdiction = urn:iso:std:iso:3166#CL "Chile" 
+
+* #1 "Adolescencia"
+* #14 "Dermatología y Venerología"
+* #16 "Endocrinología"
+* #18 "Enfermedades Respiratorias"
+* #19 "Enfermedades Respiratorias Pediátricas"
+* #20 "Gastroenterología"
+* #24 "Ginecología Oncológica"
+* #30 "Inmunología Clínica"
+* #32 "Mastología"
+* #34 "Medicina Física y Rehabilitación"
+* #35 "Medicina Intensiva"
+* #39 "Medicina Materno Fetal"
+* #41 "Medicina Paliativa Del Adulto"
+* #42 "Medicina Reproductiva"
+* #43 "Nefrología"
+* #44 "Nefrología Pediátrica"
+* #47 "Neurología"
+* #49 "Neurorradiología"
+* #50 "Nutrición Clínica del Adulto"
+* #51 "Nutrición Clínica Pediátrica"
+* #58 "Psiquiatría"
+* #59 "Psiquiatría Infantil y de la Adolescencia"
+* #3 "Imagenología Maxilofacial"
+* #8 "Patología Oral y Maxilofacial"

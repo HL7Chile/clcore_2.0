@@ -2,9 +2,9 @@ Profile:        CoreRolClinicoCl
 Parent:         PractitionerRole
 Id:             CoreRolClinicoCl
 Title:          "CL RolClinico"
-Description:    "Este Perfil ha sido desarrollado para cubrir las necesidades del Caso de Uso de Receta Electrónica. Sin embargo, se ha modelado con el fin de cubrir las necesidades nacionales de un Recurso de Especialidad Médica para la denominación de Prescriptor en Chile"
+Description:    "Este Perfil se ha modelado con el fin de cubrir las necesidades la función de Prestador en una organización de Chile por ejemplo: Hospital, Clínica, Cesfam, farmacias, etc"
 
-* active = true
+//* active = true
 * active MS
 * period MS
   * start MS
@@ -45,12 +45,15 @@ Description:    "Este Perfil ha sido desarrollado para cubrir las necesidades de
 * location.display ^short = "Nombre de la ubicación"
 * location.display ^definition = "Nombre completo de la ubicación de salud"
 
+* code MS
+  * ^short = "Rol que cumple un profesional en una organización"
+  * ^definition = "Rol que cumple un profesional en una organización."  
 
 * specialty MS
-* specialty ^short = "Definición de la especialidad médica según DEIS"
-* specialty ^definition = "Definición de la especialidad médica según DEIS, en el decreto correspondiete. la tabla sigue siendo extensible ante futuros elementos agregados a esta"
-* specialty from VSEspecialidadMedica (required)
-* specialty ^binding.description = "Códigos de Especialidad DEIS" 
+* specialty ^short = "Definición de la especialidad médica"
+* specialty ^definition = "Definición de la especialidad médica, en el decreto correspondiete."
+* specialty from VSEspecialidadesCL (preferred)
+* specialty ^binding.description = "Códigos de Especialidad" 
 
 
 

@@ -1,5 +1,10 @@
-### Versión 1.9.0
 
+### Versión 2.0.0
+- Se genera el Capability Statement para el servidor FHIR Cl Core.
+- Se hace la dependencia a la EIS(Estandares en Informatica en Salud) el Simil a la norma 231(Nueva 820).
+
+
+### Versión 1.9.0
 - Perfil [MedicamentoCL](StructureDefinition-CoreMedicamentoCl.html)
   - Se elimina los Slice de **DescriptionID** y **ConceptID**.
   - Se agregan al MS los siguientes datos:
@@ -10,6 +15,8 @@
       - item
       - isActive
       - strength
+  - ingredent.itemReference referencia a **MedicamentoCL** o **Substance**
+  - ingredent.itemCodeableConcept a http://hl7.org/fhir/ValueSet/medication-codes como example
   - Se cambian las descripciones y definiciones que referencien a la TFC.
   - Se habilitan los ejemplo:
     * [Medicamento comprimido Tareg - D 160](Medication-MedicamentoCl.html)
@@ -30,8 +37,11 @@
 
 - Perfil [CoreRolClinicoCl](StructureDefinition-CoreRolClinicoCl.html)
   - Se modifica la descripción
+  - Se elimina el required Pattern = true
   - Se modifica la referencia organization al **OrganizationCL**
   - Se modifica la referencia location al **CoreLocalizacionCl**
+  - Se modifica specialty binding de **required** a **preferred**
+  - Se agrega MS el dato **code**
   - Se genera ejemplo [Ejemplo de Recurso de especialidad](PractitionerRole-EjemploEspecialidadCL.html)
   - Se genera ejemplo [Ejemplo de Especialidad Medicina Familiar](PractitionerRole-EjemploEspecialidadCL2.html)
 
@@ -61,6 +71,11 @@
 - Perfil [CL Provenance](StructureDefinition-ProvenanceCl.html)
   - Se cambia la referencia de location al perfil de la guía
   - Se cambia la referencia de agent.who y signature.who a los perfiles que existan en la guía y aquellos que no, se referencian al estandar.
+
+- Perfil [DocumentoCL](StructureDefinition-DocumentoCL.html)
+  - Se cambian las referencia de Subject de PacienteCL a cualquier recurso
+  - Se cambia las referencia de author a las siguientes: CL Prestador | CL RolClinico | Device | CL Paciente | CL Prestador | CL Organización
+  - Se cambia las referencia de attester.party: CL Paciente | RelatedPerson | CL Prestador | CL RolClinico | CL Organización
 
 - Se vuelve habilitar los siguientes ejemplos corregidos:
  - [Localización de Farmacia](Location-LocalizacionEjemploCL1.html)

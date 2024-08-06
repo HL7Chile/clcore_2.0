@@ -1,5 +1,6 @@
 Profile: CoreMedicamentoCl
 Parent: Medication
+Id: CoreMedicamentoCl
 Title: "Medicamento Core CL"
 Description: "Descriopción Medicamento"
 
@@ -90,6 +91,8 @@ Description: "Descriopción Medicamento"
 * ingredient ^short = "Componentes del medicamento"
   * item[x] MS
   * item[x] ^short = "Componente del fármaco"
+  * itemCodeableConcept from http://hl7.org/fhir/ValueSet/medication-codes (example)
+  * itemReference only Reference(Substance or CoreMedicamentoCl)
   * isActive 0..1 MS
   * isActive ^short = "Determinación si el componente es componente activo o no"
   * strength 0..1 MS

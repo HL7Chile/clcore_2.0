@@ -8,7 +8,7 @@ canonical: https://hl7chile.cl/fhir/ig/clcore2
 name: clcore2
 title: Guía de Implementación ''cl core'' FHIR R4, (Versión Evolutiva)
 status: active # draft | active | retired | unknown
-version: 1.9.0
+version: 2.0.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2024+
 releaseLabel: draft # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -37,13 +37,15 @@ pages:
     title: Objetivos
   Aspectos-Generales.md:
     title: Generalidades
-  Extensiones.md:
-  Set-De-Validacion-ValueSets.md:
-    title: CodeSystems/ValueSets
-  Perfiles.md:
-    title: Perfiles
-  Set-Ejemplos.md:
-    title: Ejemplos
+  Notas-MS.md:
+    title: Notas del Must Support
+  #Extensiones.md:
+  #Set-De-Validacion-ValueSets.md:
+  #  title: CodeSystems/ValueSets
+  #Perfiles.md:
+  #  title: Perfiles
+  #Set-Ejemplos.md:
+  #  title: Ejemplos
   changes.md:
     title: Historial de Cambios
 
@@ -53,8 +55,11 @@ pages:
 
 menu:
   Inicio: index.html
-  Generalidades: Aspectos-Generales.html
   Objetivos: Alcances-Objetivos.html
+  Generalidades: Aspectos-Generales.html
+  Must Support: Notas-MS.html
+  CapabilityStatement:
+    CapabilityStatement Servidor: CapabilityStatement-cl-core-server.html
   Artefactos: artifacts.html
     #Perfiles: Perfiles.html
     #Extensiones: Extensiones.html
