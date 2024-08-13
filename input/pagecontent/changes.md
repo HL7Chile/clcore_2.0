@@ -1,9 +1,3 @@
-
-### Versión 2.0.0
-- Se genera el Capability Statement para el servidor FHIR Cl Core.
-- Se hace la dependencia a la EIS(Estandares en Informatica en Salud) el Simil a la norma 231(Nueva 820).
-
-
 ### Versión 1.9.0
 - Perfil [MedicamentoCL](StructureDefinition-CoreMedicamentoCl.html)
   - Se elimina los Slice de **DescriptionID** y **ConceptID**.
@@ -30,6 +24,13 @@
  - Se filtra a solo hallazgos clínicos
  - Value set de problemas sin informar o desconocidos
 
+- Se crean nuevos CodeSystem:
+  - Códigos de Especialidades de CONACEM y CONACEO
+  - Especialidad Odontológica
+  - Especialidad Especialidad Farmacia
+
+- Se cambia el VSEspecialidadesDeisCL a VSEspecialidadesCL para incluir aquellas que no están consideradas por el DEIS
+
 - Se modifica y agregan nuevos terminos en "CSTipoIdentificador"
 - Perfil [PacienteCL](StructureDefinition-CorePacienteCl.html)
   - Se cambio referencia de **generalPractitioner** de Organization -> OrganizacionCL y Practitioner -> PrestadorCL
@@ -42,6 +43,7 @@
   - Se modifica la referencia location al **CoreLocalizacionCl**
   - Se modifica specialty binding de **required** a **preferred**
   - Se agrega MS el dato **code**
+  - Se cambia el binding a VSEspecialidades (Preferred)
   - Se genera ejemplo [Ejemplo de Recurso de especialidad](PractitionerRole-EjemploEspecialidadCL.html)
   - Se genera ejemplo [Ejemplo de Especialidad Medicina Familiar](PractitionerRole-EjemploEspecialidadCL2.html)
 
@@ -72,7 +74,7 @@
   - Se cambia la referencia de location al perfil de la guía
   - Se cambia la referencia de agent.who y signature.who a los perfiles que existan en la guía y aquellos que no, se referencian al estandar.
 
-- Perfil [DocumentoCL](StructureDefinition-DocumentoCL.html)
+- Perfil [DocumentoCL](StructureDefinition-DocumentoCl.html)
   - Se cambian las referencia de Subject de PacienteCL a cualquier recurso
   - Se cambia las referencia de author a las siguientes: CL Prestador | CL RolClinico | Device | CL Paciente | CL Prestador | CL Organización
   - Se cambia las referencia de attester.party: CL Paciente | RelatedPerson | CL Prestador | CL RolClinico | CL Organización
@@ -91,6 +93,10 @@
 - CodeSystem deprecados:
   - Códigos del Sistema Nacional de Servicios de Salud
   - Códigos de razones por la cuales el encuentro remoto no se pudo llevar a cabo
+
+- Se crea los siguientes CapabilityStatement:
+  - [CapibilityStatement Servidor CL Core](CapabilityStatement-cl-core-server.html): para las indicaciones de un servidor oficial de HL7 Chile.
+  - [CapabilityStatement Cliente Cl Core](CapabilityStatement-cl-core-client.html): para las iteraciones de un cliente con un servidor oficial de HL7 Chile.
 
 ### Version 1.8.9
 - Version de prueba debido a cambios en los publicadores

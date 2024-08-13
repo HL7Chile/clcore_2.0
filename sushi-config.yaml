@@ -35,10 +35,10 @@ pages:
     title: Inicio
   Alcances-Objetivos.md:
     title: Objetivos
-  Aspectos-Generales.md:
-    title: Generalidades
   Notas-MS.md:
     title: Notas del Must Support
+  Aspectos-Generales.md:
+    title: Generalidades
   #Extensiones.md:
   #Set-De-Validacion-ValueSets.md:
   #  title: CodeSystems/ValueSets
@@ -56,10 +56,11 @@ pages:
 menu:
   Inicio: index.html
   Objetivos: Alcances-Objetivos.html
-  Generalidades: Aspectos-Generales.html
   Must Support: Notas-MS.html
+  Generalidades: Aspectos-Generales.html
   CapabilityStatement:
     CapabilityStatement Servidor: CapabilityStatement-cl-core-server.html
+    CapabilityStatement Cliente: CapabilityStatement-cl-core-client.html
   Artefactos: artifacts.html
     #Perfiles: Perfiles.html
     #Extensiones: Extensiones.html
@@ -74,3 +75,4 @@ parameters:
   show-inherited-invariants: false
   excludettl: true
   generate: genExamples
+

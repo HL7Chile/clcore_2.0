@@ -3,6 +3,3 @@
 # Add warning and/or information messages here after you've confirmed that they aren't really a problem
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
-
-# Este error es causado por un problema del publisher, dado que no reconoce los distintos tipos de value[x]. Pero la invariante funciona correctamente
-ERROR: StructureDefinition/DigitoVerificador: StructureDefinition.snapshot.element[0].constraint[2]: Error in constraint 'cl-dv-1' with expression 'valueString.matches('[0-9kK]+') and valueString.length() = 1': !!Error evaluando la expresión FHIRPath: El nombre valueString no es válido para ninguno de los posibles tipos: [http://hl7.org/fhir/StructureDefinition/Extension] (@char 5)

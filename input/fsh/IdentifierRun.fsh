@@ -34,4 +34,4 @@ Expression:  "value.matches('[0-9]+') and value.toInteger() < 99999999"
 Invariant:   cl-dv-1
 Description: "Debe permitir un unico valor valor numérico, incluido el cero y letra K mayúsculas o minúscula"
 Severity:    #error
-Expression:  "valueString.matches('[0-9kK]+') and valueString.length() = 1"
+Expression:  "value.ofType(string).matches('[0-9kK]+') and value.ofType(string).length() = 1"

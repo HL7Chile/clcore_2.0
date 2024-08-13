@@ -1,8 +1,8 @@
 Profile: CoreMedicamentoCl
 Parent: Medication
 Id: CoreMedicamentoCl
-Title: "Medicamento Core CL"
-Description: "Descriopción Medicamento"
+Title: "CL Medicamento"
+Description: "Descripción de un Medicamento"
 
 //* extension contains NombreComercial named NombreComercial 0..1 MS
 
